@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Horeca app</title>
+		<style>
+			.MainDiv{
+				margin: 0 auto;
+				width: 1100px;
+			}
+			.MainHeader{
+				text-align: center;
+				font-size: 60px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="MainDiv">
+			<h1 class="MainHeader">Horica App</h1>
+		</div>
+		<script scr="index.js">
+		function drinks(){
+			var choice = prompt("What do you want to drink? soda beer of wine? type anything else to continue to food");
+				if(choice == "soda"){
+					alert("You chose soda");
+					soda = amountSoda(soda);
+					alert("Now we'll go back to drinks if you want something else than drinks type something other than the drink options");
+					console.log(soda);
+					drinks();
+				}
+				
+				if(choice == "beer"){
+					alert("You chose beer");
+					beer = amountBeer(beer);
+					alert("Now we'll go back to drinks if you want something else than drinks type something other than the drink options");
+					console.log(beer);
+					drinks();	
+				}
+			
+				if(choice == "wine"){
+					alert("You chose wine");
+					wine = amountWine(wine);
+					alert("Now we'll go back to drinks if you want something else than drinks type something other than the drink options");
+					console.log(wine);
+					drinks();		
+				}else{
+					var DrinkOrFood = prompt("Do you want to continue to food?")
+				}
+				if(DrinkOrFood =="yes"){
+					food();
+				}if(DrinkOrFood =="no"){
+					drinks();
+				}else{
+					drinks();
+				}
+				if(choice =="food"){
+					food();
+				}
+		} 
+		function amountSoda(oldValueSoda){
+		var newSoda = Number(prompt("Hoeveel soda wilt u?"));
+		return newSoda + oldValueSoda
+		}
+		function amountBeer(oldValueBeer){
+		var newBeer = Number(prompt("Hoeveel beer wilt u?"));
+		return newBeer + oldValueBeer
+		}
+		function amountWine(oldValueWine){
+		var newWine = Number(prompt("Hoeveel wine wilt u?"));
+		return newWine + oldValueWine
+		}
+			var soda = 0;
+			var beer = 0;
+			var wine = 0;
+			drinks();
+		</script>
+	</body>
+</html>

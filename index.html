@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script scr="index.js">
+		function drinks(){
+			var choice = prompt("What do you want to drink? soda beer of wine? type anything else to continue to food");
+				if(choice == "soda"){
+					alert("You chose soda");
+					soda = amountSoda(soda);
+					alert("Now we'll go back to drinks if you want something else than drinks type something other than the drink options");
+					console.log(soda);
+					drinks();
+				}
+				
+				if(choice == "beer"){
+					alert("You chose beer");
+					beer = amountBeer(beer);
+					alert("Now we'll go back to drinks if you want something else than drinks type something other than the drink options");
+					console.log(beer);
+					drinks();	
+				}
+			
+				if(choice == "wine"){
+					alert("You chose wine");
+					wine = amountWine(wine);
+					alert("Now we'll go back to drinks if you want something else than drinks type something other than the drink options");
+					console.log(wine);
+					drinks();		
+				}else{
+					var DrinkOrFood = prompt("Do you want to continue to food?")
+				}
+</script>
+</body>
+</html>
